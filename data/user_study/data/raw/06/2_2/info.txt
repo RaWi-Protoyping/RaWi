@@ -1,0 +1,1 @@
+Note: In the final GUI at minute 7 the number of ratings should not be counted, screenshot could only be taken later due to not being fully on the screen

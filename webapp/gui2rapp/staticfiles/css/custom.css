@@ -1,0 +1,35 @@
+.btn-correct:hover,
+.btn-correct:active,
+.btn-correct:visited,
+.btn-correct:focus,
+.btn-correct.active {
+  background-color: #218838 !important;
+  border-color: #93d3a2 !important
+  outline: none !important;
+  box-shadow: none;
+  z-index: 1
+}
+
+.btn-incorrect:hover,
+.btn-incorrect:active,
+.btn-incorrect:visited,
+.btn-incorrect:focus,
+.btn-incorrect.active {
+  background-color: #c82333 !important;
+  border-color: #ed9aa2 !important
+  outline: none !important;
+  box-shadow: none;
+  z-index: 1
+}
+
+.btn-correctmed:hover,
+.btn-correctmed:active,
+.btn-correctmed:visited,
+.btn-correctmed:focus,
+.btn-correctmed.active {
+  background-color: #ffc000 !important;
+  border-color: #93d3a2 !important
+  outline: none !important;
+  box-shadow: none;
+  z-index: 1
+}

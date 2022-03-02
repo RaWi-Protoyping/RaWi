@@ -1,0 +1,3 @@
+Note: In gui at 4mins the amazon image was not there but the screen was overlayed by the add image dialog
+
+Note: In gui at 7mins the header is same like in min 6 but was zoomed in by participant
