@@ -8,6 +8,7 @@ from gui2r.retrieval.ranker.ranker_v2 import Ranker
 from gui2r.retrieval.configuration.conf import Configuration
 from gui2r.retrieval.ranker.vsm_tfidf_ranker import TFIDFRanker
 from gui2r.retrieval.ranker.bm25okapi_ranker import BM25OkapiRanker
+from gui2r.retrieval.ranker.sentence_bert_ranker import SentenceBERTRanker
 from gui2r.retrieval.ranker.tfr_bert_ranker import TFRBertRanker
 from gui2r.retrieval.ranker.bool_iwcs_ranker import BoolIWCSRanker
 from gui2r.retrieval.query_expansion.loc_prf_kld_bm25_expander import LocalPrfKldBM25ExpanderRanker
@@ -88,6 +89,7 @@ class EvaluationAnalysis(object):
         if ranker == Ranker.R_PRF_KLD_CAT_BM25: return LocalPrfKldCatBM25ExpanderRanker.load(config)
         if ranker == Ranker.R_PRF_KLD_WEIGHTED_BM25: return LocalPrfKldWeightedBM25ExpanderRanker.load(config)
         if ranker == Ranker.R_PRF_KLD_CAT_WEIGHTED_BM25: return LocalPrfKldCatWeightedBM25ExpanderRanker.load(config)
+        if ranker == Ranker.R_SENTBERT: return SentenceBERTRanker.load(config)
         if ranker == Ranker.R_BERT_POINTWISE_1: return TFRBertRanker.load(config, model=TFRBertRanker.R_BERT_POINTWISE_1)
         if ranker == Ranker.R_BERT_PAIRWISE: return TFRBertRanker.load(config, model=TFRBertRanker.R_BERT_PAIRWISE)
         if ranker == Ranker.R_BERT_POINTWISE_2: return TFRBertRanker.load(config, model=TFRBertRanker.R_BERT_POINTWISE_2)
@@ -207,7 +209,8 @@ if __name__ == '__main__':
                 (Ranker.R_PRF_KLD_CAT_BM25, vis_conf_full_new_filter),
                 (Ranker.R_PRF_KLD_WEIGHTED_BM25, vis_conf_full_new_filter),
                 (Ranker.R_PRF_KLD_CAT_WEIGHTED_BM25, vis_conf_full_new_filter),
-               # BERT-LTR models
+               # BERT baseline and BERT-LTR models
+                (Ranker.R_SENTBERT, vis_conf_full_new_filter),
                 (Ranker.R_BERT_POINTWISE_1, vis_conf_full_new_filter),
                 (Ranker.R_BERT_PAIRWISE, vis_conf_full_new_filter),
                 (Ranker.R_BERT_POINTWISE_2, vis_conf_full_new_filter),

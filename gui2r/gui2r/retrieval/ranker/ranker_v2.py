@@ -14,7 +14,8 @@ class Ranker(ABC):
     R_PRF_KLD_WEIGHTED_BM25 = 'prf_kld_weighted_bm25'
     R_PRF_KLD_CAT_BM25 = 'prf_kld_cat_bm25'
     R_PRF_KLD_CAT_WEIGHTED_BM25 = 'prf_kld_cat_weighted_bm25'
-    # BERT-LTR models
+    # BERT baseline and BERT-LTR models
+    R_SENTBERT = 'sent-bert'
     R_BERT_POINTWISE_1 = 'tfr-bert (loss_pointwise)'
     R_BERT_PAIRWISE = 'tfr-bert (loss_pairwise)'
     R_BERT_POINTWISE_2 = 'tfr-bert (loss_pointwise_softmax)'

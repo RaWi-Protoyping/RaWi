@@ -5,6 +5,7 @@ from gui2r.preprocessing.preprocess import Preprocessor
 from gui2r.retrieval.ranker.ranker_v2 import Ranker
 from gui2r.retrieval.ranker.vsm_tfidf_ranker import TFIDFRanker
 from gui2r.retrieval.ranker.bm25okapi_ranker import BM25OkapiRanker
+from gui2r.retrieval.ranker.sentence_bert_ranker import SentenceBERTRanker
 from gui2r.retrieval.query_expansion.loc_prf_kld_bm25_expander import LocalPrfKldBM25ExpanderRanker
 from gui2r.retrieval.query_expansion.loc_prf_kld_cat_bm25_expander import LocalPrfKldCatBM25ExpanderRanker
 from gui2r.retrieval.query_expansion.loc_prf_kld_bm25_weighted_expander import LocalPrfKldWeightedBM25ExpanderRanker
@@ -29,7 +30,8 @@ class Retriever(object):
                            Ranker.R_PRF_KLD_WEIGHTED_BM25: LocalPrfKldWeightedBM25ExpanderRanker.load(conf),
                            Ranker.R_PRF_KLD_CAT_WEIGHTED_BM25: LocalPrfKldCatWeightedBM25ExpanderRanker.load(conf),
                            Ranker.R_PRF_KLD_CAT_BM25: LocalPrfKldCatBM25ExpanderRanker.load(conf),
-                           Ranker.R_PRF_KLD_BM25: LocalPrfKldBM25ExpanderRanker.load(conf)}
+                           Ranker.R_PRF_KLD_BM25: LocalPrfKldBM25ExpanderRanker.load(conf),
+                           Ranker.R_SENTBERT : SentenceBERTRanker.load(conf)}
         self.preprocessor = Preprocessor()
         self.expander = {}
 
