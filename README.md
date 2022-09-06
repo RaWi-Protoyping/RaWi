@@ -1,5 +1,7 @@
 # Data-Driven Prototyping via Natural-Language-based GUI Retrieval
 
+[![DOI](https://zenodo.org/badge/465262035.svg)](https://zenodo.org/badge/latestdoi/465262035)
+
 The supplementary material of our submission to the ASE Journal is structured as follows:
 
 - **data**: This directory contains all the datasets used for GUI ranking and all the materials and datasets from the conducted user study
